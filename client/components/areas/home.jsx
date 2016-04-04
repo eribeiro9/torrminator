@@ -1,25 +1,33 @@
-Home = React.createClass({
-  searchTorrent(e) {
-    e.preventDefault()
+import React from 'react'
+import Kickass from 'kickass-torrent'
 
-    console.log(e.target.search.value)
+searchTorrent = (e) => {
+  e.preventDefault()
 
-    e.target.search.value = ''
-  },
+  Kickass({
+    q: e.target.search.value,
+    url: 'http://kickasstorrents.eu/'
+  }, function (err, res) {
+    if (err) {
+      console.error(err)
+    } else {
+      console.log(res)
+    }
+  })
 
-  render() {
-    return (
-      <div id="home-layout" className="ui centered grid">
-        <div className="eight wide column">
-          <h1 id="home-header" className="ui center aligned header">Torrminator</h1>
-          <form id="home-form" onSubmit={ this.searchTorrent } className="ui form">
-            <div className="ui big transparent fluid icon input">
-              <input type="text" name="search" placeholder="Find a torrent..." />
-              <i className="search icon"></i>
-            </div>
-          </form>
+  e.target.search.value = ''
+}
+
+export const Home = () => (
+  <div id="home-layout" className="ui centered grid">
+    <div className="eight wide column">
+      <h1 id="home-header" className="ui center aligned header">Torrminator</h1>
+      <form id="home-form" onSubmit={ searchTorrent } className="ui form">
+        <div className="ui big transparent fluid icon input">
+          <input type="text" name="search" placeholder="Find a torrent..." />
+          <i className="search icon"></i>
         </div>
-      </div>
-    )
-  }
-})
+      </form>
+    </div>
+  </div>
+)
