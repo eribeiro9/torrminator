@@ -1,0 +1,36 @@
+{
+  "name": "torrminator",
+  "version": "1.0.0",
+  "description": "Start downloading a torrent from one search",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "meteor-node-stubs": "^0.2.1",
+    "react": "^0.14.8",
+    "react-addons-create-fragment": "^0.14.8",
+    "react-addons-css-transition-group": "^0.14.8",
+    "react-addons-linked-state-mixin": "^0.14.8",
+    "react-addons-perf": "^0.14.8",
+    "react-addons-pure-render-mixin": "^0.14.8",
+    "react-addons-test-utils": "^0.14.8",
+    "react-addons-transition-group": "^0.14.8",
+    "react-addons-update": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "react-mounter": "^1.1.0",
+    "request": "^2.70.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eribeiro9/torrminator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eribeiro9/torrminator/issues"
+  },
+  "homepage": "https://github.com/eribeiro9/torrminator"
+}
